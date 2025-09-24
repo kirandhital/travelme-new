@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Card,
   CardHeader,
@@ -13,13 +13,14 @@ import {
 
 const Destinations = () => {
   return (
-  <Card className="w-full max-w-[26rem] shadow-lg">
+    <Card className="w-full max-w-[26rem] shadow-lg">
       <CardHeader floated={false} color="blue-gray">
         <img
           src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           alt="ui/ux review check"
+          className="h-full w-full object-cover" // Add object-cover for better image fitting
         />
-        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60" />
         <IconButton
           size="sm"
           color="red"
@@ -146,9 +147,9 @@ const Destinations = () => {
             </span>
           </Tooltip>
           <Tooltip content="And +20 more">
-            <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
+            <Typography as="span" className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
               +20
-            </span>
+            </Typography>
           </Tooltip>
         </div>
       </CardBody>
@@ -158,7 +159,7 @@ const Destinations = () => {
         </Button>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 
-export default Destinations
+export default Destinations;
